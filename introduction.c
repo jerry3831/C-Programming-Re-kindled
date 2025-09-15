@@ -27,7 +27,7 @@ int main(void) {
     char operandType[10];
 
     //? initializing operands
-    operandInitialization();
+    
 
     //? matching operators to actions
     // TODO: FUFUZA & fix the error {implicit declarion of function(args)}
@@ -96,10 +96,7 @@ float float_division(float a, float b)
 {   if (b != 0) {
         return a / b;
     }
-}
 
-void operandInitialization()
-{
     char operator;
     int a, b;
     float c, d;
@@ -124,7 +121,13 @@ void operandInitialization()
     else {
         printf("invalid operand or operand type declaration");  
         //TODO: make a base case to stop recursion when it is met
-        operandInitialization(); 
+        int i = 5;
+        while (i > 0) {
+            operandInitialization();
+            i--;
+        }
+
+        printf("You have %d trials left", i);
     }
 }
 
